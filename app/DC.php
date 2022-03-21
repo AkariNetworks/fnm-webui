@@ -128,7 +128,7 @@ class DC extends Model
         $totals = [];
 
         // Inbound MBPS
-        $totals['in_mbps'] = $json['values'][1]['value'] + $json['values'][5]['value'] + $json['values'][7]['value'];
+        $totals['in_mbps'] = $json['values'][1]['value'];
         $totals['in_mbps_suffix'] = "mbps";
         if($totals['in_mbps'] > 10240) {
             $totals['in_mbps'] = $totals['in_mbps'] / 1024;
@@ -136,7 +136,7 @@ class DC extends Model
         }
 
         // Inbound PPS
-        $totals['in_pps'] = $json['values'][0]['value'] + $json['values'][4]['value'] + $json['values'][6]['value'];
+        $totals['in_pps'] = $json['values'][0]['value'];
         $totals['in_pps_suffix'] = "pps";
         if($totals['in_pps'] > 10000) {
             $totals['in_pps'] = $totals['in_pps'] / 1000;
@@ -144,7 +144,7 @@ class DC extends Model
         }
 
         // Outbound MBPS
-        $totals['out_mbps'] = $json['values'][3]['value'];
+        $totals['out_mbps'] = $json['values'][4]['value'];
         $totals['out_mbps_suffix'] = "mbps";
         if($totals['out_mbps'] > 10240) {
             $totals['out_mbps'] = $totals['out_mbps'] / 1024;
@@ -152,7 +152,7 @@ class DC extends Model
         }
 
         // Outbound PPS
-        $totals['out_pps'] = $json['values'][2]['value'];
+        $totals['out_pps'] = $json['values'][3]['value'];
         $totals['out_pps_suffix'] = "pps";
         if($totals['out_pps'] > 10000) {
             $totals['out_pps'] = $totals['out_pps'] / 1000;

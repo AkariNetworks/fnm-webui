@@ -60,7 +60,7 @@ View Action - {{$action->uuid}}
                             <i class="fa fa-bar-chart fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">{{ round($action->attack_total_incoming_traffic / 1024) }} mbps</div>
+                            <div class="huge">{{ round($action->attack_total_incoming_traffic / 1024 / 1024 / 1024 * 8, 2) }} Gbps</div>
                             <div><strong>INBOUND TRAFFIC</strong></div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ View Action - {{$action->uuid}}
                             <i class="fa fa-area-chart fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">{{ $action->attack_total_incoming_pps }} pps</div>
+                            <div class="huge">{{ round($action->attack_total_incoming_pps  / 10000, 2) }}w pps</div>
                             <div><strong>INBOUND PACKETS</strong></div>
                         </div>
                     </div>

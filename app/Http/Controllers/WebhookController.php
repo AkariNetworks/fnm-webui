@@ -70,8 +70,8 @@ class WebhookController extends Controller
         $action->attack_detection_source           = $data['attack_details']['attack_detection_source'];
         $action->attack_initial_power              = $data['attack_details']['initial_attack_power'];
         $action->attack_peak_power                 = $data['attack_details']['peak_attack_power'];
-        $action->attack_total_incoming_traffic     = $data['attack_details']['total_incoming_traffic'];
-        $action->attack_total_outgoing_traffic     = $data['attack_details']['total_outgoing_traffic'];
+        $action->attack_total_incoming_traffic     = $data['attack_details']['total_incoming_traffic_bits'];
+        $action->attack_total_outgoing_traffic     = $data['attack_details']['total_outgoing_traffic_bits'];
         $action->attack_total_incoming_pps         = $data['attack_details']['total_incoming_pps'];
         $action->attack_total_outgoing_pps         = $data['attack_details']['total_outgoing_pps'];
         $action->attack_total_incoming_flows       = $data['attack_details']['total_incoming_flows'];
