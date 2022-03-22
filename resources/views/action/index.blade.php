@@ -60,7 +60,7 @@ Action History
                                 <td><kbd>{{ $action->ip }}</kbd></td>
                                 <td><a href="{{ route('hostgroup.show', $action->hostgroup) }}">{{ $action->hostgroup->name }}</a></td>
                                 <td>{{ $action->attack_total_incoming_pps }} pps</td>
-                                <td>{{ round($action->attack_total_incoming_traffic / 1024) }} mbps</td>
+                                <td>{{ round($action->attack_total_incoming_traffic / 1024 / 1024 * 8, 2) }} mbps</td>
                                 <td class="text-right">
                                     <a href="{{ route('action.show', $action) }}" class="btn btn-xs btn-default"><i class="fa fa-search" aria-hidden="true"></i> &nbsp;View</a>
                                 </td>
