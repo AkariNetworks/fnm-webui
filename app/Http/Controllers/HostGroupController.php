@@ -129,6 +129,8 @@ class HostGroupController extends Controller
         }
 
         // Handle all the aliases that are also in the API...
+        $validatedData['enable_ban_incoming'] = $validatedData['enable_ban'];
+        
         $validatedData['ban_for_pps'] = $validatedData['enable_ban'];
         $validatedData['ban_for_tcp_pps'] = $validatedData['enable_ban'];
         $validatedData['ban_for_udp_pps'] = $validatedData['enable_ban'];
